@@ -41,9 +41,18 @@ function renderCatalogue(filter = "all") {
   }
   catalogue.innerHTML = items.map((l) => {
     const msg = `Bonjour HOMLINK, je souhaite réserver ou avoir des informations sur : ${l.name} (${l.type}${l.area ? ", " + l.area : ""}).`;
-    const media = l.photo
-      ? `<img src="${escapeHTML(l.photo)}" alt="${escapeHTML(l.name)}" loading="lazy" style="width:100%;height:100%;object-fit:cover">`
-      : ICON_HOUSE;
+    const pics = (l.photos && l.photos.length ? l.photos : (l.photo ? [l.photo] : []));
+    let media = ICON_HOUSE;
+    if (pics.length) {
+      const slides = pics.map((src, i) =>
+        `<img src="${escapeHTML(src)}" alt="${escapeHTML(l.name)} - photo ${i + 1}" ${i ? 'loading="lazy"' : ""}>`).join("");
+      const nav = pics.length > 1
+        ? `<button class="car-btn prev" type="button" aria-label="Photo précédente">‹</button>
+           <button class="car-btn next" type="button" aria-label="Photo suivante">›</button>
+           <span class="car-count" aria-hidden="true">1 / ${pics.length}</span>`
+        : "";
+      media = `<div class="carousel" tabindex="0" aria-label="Photos de ${escapeHTML(l.name)}"><div class="car-track">${slides}</div>${nav}</div>`;
+    }
     const amenities = (l.amenities || []).map((a) => `<li>${escapeHTML(a)}</li>`).join("");
     return `
       <article class="card listing reveal visible">
@@ -61,6 +70,31 @@ function renderCatalogue(filter = "all") {
         </div>
       </article>`;
   }).join("");
+  initCarousels();
+}
+
+function initCarousels() {
+  catalogue.querySelectorAll(".carousel").forEach((car) => {
+    const track = car.querySelector(".car-track");
+    const imgs = track.querySelectorAll("img");
+    const count = car.querySelector(".car-count");
+    if (!count) return;
+    const go = (dir) => {
+      const w = track.clientWidth;
+      const i = Math.round(track.scrollLeft / w) + dir;
+      track.scrollTo({ left: Math.max(0, Math.min(imgs.length - 1, i)) * w, behavior: "smooth" });
+    };
+    car.querySelector(".prev").addEventListener("click", () => go(-1));
+    car.querySelector(".next").addEventListener("click", () => go(1));
+    car.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") go(-1);
+      if (e.key === "ArrowRight") go(1);
+    });
+    track.addEventListener("scroll", () => {
+      const i = Math.round(track.scrollLeft / track.clientWidth) + 1;
+      count.textContent = `${i} / ${imgs.length}`;
+    }, { passive: true });
+  });
 }
 
 document.querySelectorAll(".filter").forEach((btn) => {
