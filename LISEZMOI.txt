@@ -1,0 +1,16 @@
+HOMLINK - SITE VITRINE
+=========================
+
+POUR VOIR LE SITE ET LE CATALOGUE :
+  Double-cliquez sur  index.html   (et seulement celui-la).
+
+Ne double-cliquez PAS sur script.js ni style.css :
+ce sont des fichiers de fonctionnement, charges automatiquement par index.html.
+
+IMPORTANT : gardez les 3 fichiers dans le MEME dossier :
+  - index.html
+  - style.css
+  - script.js
+
+Pour modifier les logements : ouvrez script.js avec le Bloc-notes
+et changez la liste LISTINGS en haut du fichier.

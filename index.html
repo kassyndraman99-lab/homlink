@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOMLINK | Logements meublés à Abidjan</title>
+  <meta name="description" content="HOMLINK : location de logements meublés à Abidjan, gérée de A à Z. Trouvez. Contactez. Profitez.">
+  <meta name="theme-color" content="#0B2A5B">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <div class="notice" role="status">
+    🚧 HOMLINK est en cours de développement. Les réservations en ligne ne sont pas encore disponibles : contactez-nous sur WhatsApp.
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#accueil" class="logo" aria-label="HOMLINK, accueil">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">HOMLINK</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="mainNav" class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#logements">Logements</a></li>
+          <li><a href="#fonctionnement">Comment ça marche</a></li>
+          <li><a href="#partenaires">Propriétaires</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- 1. ACCUEIL -->
+    <section id="accueil" class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow reveal">Logements meublés à Abidjan</p>
+        <h1 class="reveal">Trouvez. Contactez. Profitez.</h1>
+        <p class="hero-sub reveal">HOMLINK vous propose des studios, appartements et villas meublés à Abidjan, et s'occupe de votre réservation du début à la fin.</p>
+        <div class="hero-actions reveal">
+          <a href="#logements" class="btn btn-gold">Voir les logements</a>
+          <a href="#partenaires" class="btn btn-outline">Devenir partenaire</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONCEPT -->
+    <section id="concept" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow dark">Le concept</p>
+          <h2>Votre location meublée gérée de A à Z</h2>
+          <p>Avec HOMLINK, vous avez un seul interlocuteur : nous. De la recherche du logement à la confirmation de votre réservation, c'est notre équipe qui s'occupe de tout.</p>
+        </header>
+        <div class="grid grid-3">
+          <article class="card feature reveal">
+            <div class="icon" aria-hidden="true">🔎</div>
+            <h3>Trouvez</h3>
+            <p>Parcourez une sélection de logements meublés par quartier, type et budget.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon" aria-hidden="true">💬</div>
+            <h3>Contactez</h3>
+            <p>Écrivez-nous sur WhatsApp : nous vérifions la disponibilité et répondons à vos questions.</p>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon" aria-hidden="true">🏡</div>
+            <h3>Profitez</h3>
+            <p>Séjournez dans un logement équipé, pour quelques nuits ou plusieurs semaines.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CATALOGUE -->
+    <section id="logements" class="section section-alt">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow dark">Catalogue</p>
+          <h2>Nos logements</h2>
+          <p class="demo-note">Disponibilités et tarifs confirmés par HOMLINK avant toute réservation.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filtrer par type de logement">
+          <button class="filter is-active" data-filter="all" aria-pressed="true">Tous</button>
+          <button class="filter" data-filter="Studio" aria-pressed="false">Studios</button>
+          <button class="filter" data-filter="Appartement" aria-pressed="false">Appartements</button>
+          <button class="filter" data-filter="Villa" aria-pressed="false">Villas</button>
+        </div>
+
+        <div id="catalogue" class="grid grid-3" aria-live="polite">
+          <noscript><p class="center">Activez JavaScript dans votre navigateur pour afficher le catalogue.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FONCTIONNEMENT -->
+    <section id="fonctionnement" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow dark">Fonctionnement</p>
+          <h2>Comment ça marche ?</h2>
+          <p>Un parcours en 4 étapes, sans paiement en ligne pour le moment.</p>
+        </header>
+        <ol class="steps">
+          <li class="reveal"><span class="step-num">1</span><h3>Explorez</h3><p>Consultez le catalogue et repérez le type de logement et le quartier qui vous conviennent.</p></li>
+          <li class="reveal"><span class="step-num">2</span><h3>Écrivez-nous</h3><p>Cliquez sur le bouton WhatsApp et indiquez vos dates, le nombre de personnes et votre budget.</p></li>
+          <li class="reveal"><span class="step-num">3</span><h3>Nous confirmons</h3><p>Nous vérifions la disponibilité et le tarif, puis nous vous confirmons les conditions de votre réservation.</p></li>
+          <li class="reveal"><span class="step-num">4</span><h3>Séjournez</h3><p>Nous vous communiquons les modalités d'arrivée, puis vous profitez de votre séjour.</p></li>
+        </ol>
+        <p class="center small reveal">Les réservations et paiements en ligne ne sont pas encore opérationnels. Ils pourront être ajoutés dans une prochaine version.</p>
+      </div>
+    </section>
+
+    <!-- 5. PARTENAIRES -->
+    <section id="partenaires" class="section section-blue">
+      <div class="container partner-grid">
+        <div class="partner-text reveal">
+          <p class="eyebrow">Propriétaires</p>
+          <h2>Devenez partenaire HOMLINK</h2>
+          <p>Vous avez un studio, un appartement ou une villa meublée à Abidjan ? Laissez-nous vos coordonnées : nous vous recontactons pour échanger sur un partenariat.</p>
+          <ul class="checklist">
+            <li>Visibilité auprès de nouveaux voyageurs</li>
+            <li>Réservations et échanges avec les clients gérés par HOMLINK</li>
+            <li>Un accompagnement pour présenter votre logement</li>
+          </ul>
+        </div>
+
+        <form id="partnerForm" class="form reveal" novalidate>
+          <h3>Formulaire propriétaire</h3>
+
+          <div class="field">
+            <label for="nom">Nom complet *</label>
+            <input type="text" id="nom" name="nom" autocomplete="name" required minlength="3">
+            <p class="error" id="nom-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="tel">Téléphone / WhatsApp *</label>
+            <input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="Ex : 07 00 00 00 00" required>
+            <p class="error" id="tel-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail (facultatif)</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <p class="error" id="email-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="quartier">Quartier du logement *</label>
+            <input type="text" id="quartier" name="quartier" placeholder="Ex : Riviera, Cocody, Marcory…" required>
+            <p class="error" id="quartier-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="type">Type de logement *</label>
+            <select id="type" name="type" required>
+              <option value="">Choisir…</option>
+              <option>Studio</option>
+              <option>Appartement</option>
+              <option>Villa</option>
+            </select>
+            <p class="error" id="type-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="message">Message (facultatif)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Équipements, prix souhaité, disponibilités…"></textarea>
+          </div>
+
+          <div class="field check">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">J'accepte d'être recontacté(e) par HOMLINK au sujet de mon logement. *</label>
+            <p class="error" id="consent-error" role="alert"></p>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-block">Envoyer ma demande</button>
+          <p class="form-note">En envoyant, WhatsApp s'ouvrira avec votre message prêt à être envoyé à HOMLINK.</p>
+          <p class="form-success" id="formSuccess" role="status" hidden>✅ Merci ! Vérifiez WhatsApp pour finaliser l'envoi de votre demande.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT -->
+    <section id="contact" class="section">
+      <div class="container center">
+        <header class="section-head reveal">
+          <p class="eyebrow dark">Contact</p>
+          <h2>Une question ? Parlons-en</h2>
+          <p>Notre équipe vous répond sur WhatsApp.</p>
+        </header>
+        <a class="btn btn-whatsapp reveal" id="waContact" href="https://wa.me/2250705352793" target="_blank" rel="noopener">
+          <span aria-hidden="true">💬</span>
+          Écrire sur WhatsApp
+        </a>
+        <p class="phone reveal">📞 +225 07 05 35 27 93</p>
+        <p class="small reveal">Ville : Abidjan, Côte d'Ivoire</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="logo-text light">HOMLINK</p>
+        <p>Trouvez. Contactez. Profitez.<br>Location de logements meublés à Abidjan.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📞 +225 07 05 35 27 93</p>
+        <p>💬 <a href="https://wa.me/2250705352793" target="_blank" rel="noopener">WhatsApp</a></p>
+        <p>📍 Abidjan, Côte d'Ivoire</p>
+      </div>
+      <div>
+        <h4>Réseaux sociaux</h4>
+        <!-- Remplacez les liens "#" par vos vraies pages -->
+        <p><a href="#" rel="noopener">Facebook</a></p>
+        <p><a href="#" rel="noopener">Instagram</a></p>
+        <p><a href="#" rel="noopener">TikTok</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> HOMLINK. Tous droits réservés. Plateforme en développement : aucune réservation ni paiement en ligne pour le moment.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2250705352793" class="wa-float" target="_blank" rel="noopener" aria-label="Contacter HOMLINK sur WhatsApp">💬</a>
+
+  <script src="logements.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
