@@ -1,0 +1,108 @@
+/* ===== THEME HALLOWEEN =====
+   Pour revenir au site normal après Halloween :
+   supprimez dans index.html la ligne qui contient halloween.css (et la ligne Creepster). */
+
+:root {
+  --hw-bg: #120a1f;
+  --hw-card: #1e1233;
+  --hw-card2: #2a1a47;
+  --hw-orange: #ff7a1a;
+  --hw-orange2: #ffb15c;
+  --hw-text: #efe6ff;
+  --hw-muted: #b8a6d9;
+  --hw-font: "Creepster", "Playfair Display", Georgia, serif;
+}
+
+body { background: var(--hw-bg); color: var(--hw-text); }
+.small, .section-head p, .feature p, .steps p, .where, .form-note { color: var(--hw-muted); }
+
+/* Bandeau et en-tête */
+.notice { background: #000; color: var(--hw-orange2); }
+.site-header { background: rgba(18, 10, 31, 0.96); border-bottom: 1px solid rgba(255, 122, 26, 0.35); box-shadow: 0 2px 18px rgba(255, 122, 26, 0.2); }
+.logo-mark { background: linear-gradient(135deg, var(--hw-orange), #c2410c); color: #1a0b2e; }
+.logo-text { color: #fff; }
+.main-nav a { color: var(--hw-text); }
+.main-nav a:hover { background: var(--hw-card2); }
+.main-nav .nav-cta { background: var(--hw-orange); color: #1a0b2e; }
+.main-nav .nav-cta:hover { background: var(--hw-orange2); }
+.menu-toggle span { background: var(--hw-orange2); }
+
+/* Accueil */
+.hero {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 22%, rgba(255, 177, 92, 0.95) 0 5%, rgba(255, 122, 26, 0.35) 6%, transparent 24%),
+    radial-gradient(circle at 12% 95%, rgba(107, 47, 179, 0.55), transparent 45%),
+    linear-gradient(160deg, #0d0618, #1d0f35 60%, #2a1250);
+}
+.hero::before { content: "🕸️"; position: absolute; top: 6px; left: 8px; font-size: 3.5rem; opacity: 0.55; pointer-events: none; }
+.hero h1 { font-family: var(--hw-font); font-weight: 400; letter-spacing: 0.04em; color: var(--hw-orange2); text-shadow: 0 0 22px rgba(255, 122, 26, 0.65); }
+.eyebrow { color: var(--hw-orange2); }
+.eyebrow.dark { color: var(--hw-orange); }
+
+.hw-decor span { position: absolute; pointer-events: none; user-select: none; }
+.hw-decor .bat { font-size: 2rem; animation: hw-fly 14s linear infinite; opacity: 0.85; }
+.hw-decor .bat:nth-child(1) { top: 12%; left: -8%; }
+.hw-decor .bat:nth-child(2) { top: 30%; left: -8%; animation-delay: -5s; font-size: 1.5rem; }
+.hw-decor .bat:nth-child(3) { top: 58%; left: -8%; animation-delay: -9s; font-size: 1.8rem; }
+.hw-decor .pumpkin { right: 6%; bottom: 8%; font-size: clamp(3rem, 8vw, 5.5rem); animation: hw-bob 3.5s ease-in-out infinite; filter: drop-shadow(0 0 18px rgba(255, 122, 26, 0.7)); }
+.hw-decor .ghost { right: 24%; top: 12%; font-size: clamp(2rem, 5vw, 3.2rem); animation: hw-bob 4.5s ease-in-out infinite reverse; opacity: 0.9; }
+@keyframes hw-fly { from { transform: translateX(0) translateY(0); } 50% { transform: translateX(60vw) translateY(-22px); } to { transform: translateX(115vw) translateY(0); } }
+@keyframes hw-bob { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-14px) rotate(4deg); } }
+
+/* Boutons */
+.btn-gold { background: linear-gradient(135deg, var(--hw-orange), var(--hw-orange2)); color: #1a0b2e; }
+.btn-outline { border-color: var(--hw-orange2); color: #fff; }
+
+/* Sections */
+.section-alt { background: #190e2c; }
+.section-head h2 { font-family: var(--hw-font); font-weight: 400; letter-spacing: 0.05em; color: var(--hw-orange2); }
+.demo-note { background: var(--hw-card2); border-color: var(--hw-orange); color: #ffd9b0 !important; }
+
+.card { background: var(--hw-card); border: 1px solid rgba(255, 122, 26, 0.2); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+.feature { border-top-color: var(--hw-orange); }
+.feature h3, .steps h3, .listing-body h3 { color: #fff; }
+
+/* Catalogue */
+.filter { background: var(--hw-card); border-color: #3b2563; color: var(--hw-text); }
+.filter:hover { border-color: var(--hw-orange); }
+.filter.is-active { background: var(--hw-orange); border-color: var(--hw-orange); color: #1a0b2e; }
+.thumb.t-studio { background: linear-gradient(135deg, #3b1a6b, #7c3aed); }
+.thumb.t-appartement { background: linear-gradient(135deg, #1d0f35, #4c1d95); }
+.thumb.t-villa { background: linear-gradient(135deg, #9a3412, #ff7a1a); }
+.type-tag { background: #1a0b2e; color: var(--hw-orange2); }
+.price { color: #fff; }
+.price span { color: var(--hw-orange); }
+.promo { background: #3a1d12; border-color: var(--hw-orange); color: #ffd9b0; }
+.amenities li { background: var(--hw-card2); color: #e6d8ff; }
+.car-btn { background: rgba(26, 11, 46, 0.9); color: var(--hw-orange2); }
+.car-btn:hover { background: var(--hw-orange); color: #1a0b2e; }
+
+/* Étapes */
+.step-num { background: linear-gradient(135deg, var(--hw-orange), var(--hw-orange2)); color: #1a0b2e; font-family: var(--hw-font); font-weight: 400; }
+
+/* Propriétaires + formulaire */
+.section-blue { background: linear-gradient(135deg, #0d0618, #2a1250); }
+.checklist li::before { color: var(--hw-orange2); }
+.form { background: var(--hw-card); color: var(--hw-text); border: 1px solid rgba(255, 122, 26, 0.25); }
+.form h3 { color: var(--hw-orange2); }
+.field label { color: #e6d8ff; }
+.field input[type="text"], .field input[type="tel"], .field input[type="email"], .field select, .field textarea { background: #140a24; border-color: #3b2563; color: #fff; }
+.field select option { background: #140a24; color: #fff; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--hw-orange); }
+.error { color: #ff9a9a; }
+.form-success { background: #16301f; color: #b9f5c8; }
+
+/* Contact et pied de page */
+.phone { color: var(--hw-orange2); }
+.site-footer { background: #07030d; }
+.site-footer h4 { color: var(--hw-orange2); }
+.footer-bottom { border-top-color: rgba(255, 122, 26, 0.25); }
+
+@media (max-width: 860px) {
+  .main-nav { background: #170d29; box-shadow: 0 14px 24px rgba(0, 0, 0, 0.5); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hw-decor .bat, .hw-decor .pumpkin, .hw-decor .ghost { animation: none; }
+  .hw-decor .bat { display: none; }
+}
