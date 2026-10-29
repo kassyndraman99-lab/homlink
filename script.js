@@ -10,8 +10,6 @@ const WHATSAPP_NUMBER = "2250705352793"; // format international, sans + ni espa
 /* Les logements se modifient dans le fichier logements.js */
 const LISTINGS = (typeof LOGEMENTS !== "undefined" && LOGEMENTS) || [];
 
-const ICON_HOUSE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>';
-
 /* Utilitaires */
 const waLink = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 const formatPrice = (n) => n.toLocaleString("fr-FR").replace(/\u202f|\u00a0/g, " ");
@@ -42,7 +40,7 @@ function renderCatalogue(filter = "all") {
   catalogue.innerHTML = items.map((l) => {
     const msg = `Bonjour HOMLINK, je souhaite réserver ou avoir des informations sur : ${l.name} (${l.type}${l.area ? ", " + l.area : ""}).`;
     const pics = (l.photos && l.photos.length ? l.photos : (l.photo ? [l.photo] : []));
-    let media = ICON_HOUSE;
+    let media = '<span class="no-photo">Photo bientôt disponible</span>';
     if (pics.length) {
       const slides = pics.map((src, i) =>
         `<img src="${escapeHTML(encodeURI(src))}" alt="${escapeHTML(l.name)} - photo ${i + 1}" ${i ? 'loading="lazy"' : ""}>`).join("");
@@ -62,7 +60,7 @@ function renderCatalogue(filter = "all") {
         </div>
         <div class="listing-body">
           <h3>${escapeHTML(l.name)}</h3>
-          <p class="where">📍 ${l.area ? escapeHTML(l.area) + ", " : ""}Abidjan</p>
+          <p class="where">${l.area ? escapeHTML(l.area) + ", " : ""}Abidjan</p>
           <p class="price"><span>${formatPrice(l.price)}</span> FCFA / nuit</p>
           ${l.note ? `<p class="promo">${escapeHTML(l.note)}</p>` : ""}
           <ul class="amenities">${amenities}</ul>

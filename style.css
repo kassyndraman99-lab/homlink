@@ -55,7 +55,7 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; 
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .logo-mark {
   width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center;
-  background: linear-gradient(135deg, var(--blue), var(--blue-light)); color: var(--gold-light);
+  background: var(--blue); color: var(--gold-light);
   font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.3rem;
 }
 .logo-text { font-weight: 600; color: var(--blue); letter-spacing: 0.04em; }
@@ -79,9 +79,7 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; 
 
 /* ===== Hero ===== */
 .hero {
-  background:
-    radial-gradient(circle at 80% 20%, rgba(201, 162, 75, 0.28), transparent 45%),
-    linear-gradient(135deg, var(--blue-dark), var(--blue) 60%, var(--blue-light));
+  background: var(--blue-dark);
   color: var(--white); padding: clamp(70px, 12vw, 140px) 0;
 }
 .hero-inner { max-width: 760px; }
@@ -99,7 +97,7 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; 
   transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-.btn-gold { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--blue-dark); }
+.btn-gold { background: var(--gold); color: var(--blue-dark); }
 .btn-outline { border-color: var(--gold-light); color: var(--white); }
 .btn-outline:hover { background: rgba(255, 255, 255, 0.1); }
 .btn-whatsapp { background: #25D366; color: #073b1c; }
@@ -108,7 +106,7 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; 
 /* ===== Sections ===== */
 .section { padding: clamp(56px, 8vw, 100px) 0; }
 .section-alt { background: var(--bg); }
-.section-blue { background: linear-gradient(135deg, var(--blue-dark), var(--blue)); color: var(--white); }
+.section-blue { background: var(--blue-dark); color: var(--white); }
 .section-head { max-width: 720px; margin: 0 auto 44px; text-align: center; }
 .section-head h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); color: var(--blue); margin-bottom: 12px; }
 .section-head p { color: var(--muted); }
@@ -119,7 +117,6 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; 
 
 .card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
 .feature { padding: 32px 26px; text-align: center; border-top: 4px solid var(--gold); }
-.feature .icon { font-size: 2.2rem; margin-bottom: 12px; }
 .feature h3 { color: var(--blue); margin-bottom: 8px; }
 .feature p { color: var(--muted); }
 
@@ -137,10 +134,10 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; 
 .thumb {
   position: relative; height: 190px; display: grid; place-items: center; color: rgba(255, 255, 255, 0.9);
 }
-.thumb svg { width: 72px; height: 72px; opacity: 0.9; }
-.thumb.t-studio { background: linear-gradient(135deg, #1d4a95, #4f7fcf); }
-.thumb.t-appartement { background: linear-gradient(135deg, #0B2A5B, #2c5aa8); }
-.thumb.t-villa { background: linear-gradient(135deg, #8a6a1f, #C9A24B); }
+.no-photo { font-size: 0.95rem; font-weight: 500; letter-spacing: 0.04em; opacity: 0.85; }
+.thumb.t-studio { background: #1d4a95; }
+.thumb.t-appartement { background: #2c5aa8; }
+.thumb.t-villa { background: #8a6a1f; }
 .badge {
   position: absolute; top: 12px; left: 12px; background: rgba(7, 28, 62, 0.85); color: var(--gold-light);
   font-size: 0.72rem; font-weight: 600; padding: 4px 10px; border-radius: 999px; letter-spacing: 0.04em;
@@ -160,7 +157,7 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; 
 .steps li { text-align: center; padding: 10px; }
 .step-num {
   width: 54px; height: 54px; border-radius: 50%; margin: 0 auto 14px; display: grid; place-items: center;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--blue-dark);
+  background: var(--gold); color: var(--blue-dark);
   font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.4rem;
 }
 .steps h3 { color: var(--blue); margin-bottom: 6px; }
@@ -171,7 +168,7 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; 
 .partner-text h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin-bottom: 14px; }
 .partner-text p { opacity: 0.92; margin-bottom: 18px; }
 .checklist li { padding-left: 30px; position: relative; margin-bottom: 10px; }
-.checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-light); font-weight: 700; }
+.checklist li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 10px; height: 10px; background: var(--gold-light); }
 
 .form { background: var(--white); color: var(--text); padding: 30px; border-radius: var(--radius); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25); }
 .form h3 { color: var(--blue); margin-bottom: 18px; }
@@ -204,8 +201,8 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; 
 
 /* ===== Bouton WhatsApp flottant ===== */
 .wa-float {
-  position: fixed; right: 18px; bottom: 18px; z-index: 90; width: 58px; height: 58px; border-radius: 50%;
-  background: #25D366; display: grid; place-items: center; font-size: 1.7rem; text-decoration: none;
+  position: fixed; right: 18px; bottom: 18px; z-index: 90; padding: 12px 20px; border-radius: 999px;
+  background: #25D366; color: #073b1c; font-weight: 600; font-size: 0.95rem; text-decoration: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.2s;
 }
 .wa-float:hover { transform: scale(1.08); }
@@ -217,7 +214,11 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .btn, .listing, .wa-float { transition: none; }
+  .btn, .listing, .wa-float {
+  position: fixed; right: 18px; bottom: 18px; z-index: 90; padding: 12px 20px; border-radius: 999px;
+  background: #25D366; color: #073b1c; font-weight: 600; font-size: 0.95rem; text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); transition: transform 0.2s;
+}
 }
 
 /* ===== Responsive ===== */

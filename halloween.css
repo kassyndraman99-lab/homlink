@@ -19,7 +19,7 @@ body { background: var(--hw-bg); color: var(--hw-text); }
 /* Bandeau et en-tête */
 .notice { background: #000; color: var(--hw-orange2); }
 .site-header { background: rgba(18, 10, 31, 0.96); border-bottom: 1px solid rgba(255, 122, 26, 0.35); box-shadow: 0 2px 18px rgba(255, 122, 26, 0.2); }
-.logo-mark { background: linear-gradient(135deg, var(--hw-orange), #c2410c); color: #1a0b2e; }
+.logo-mark { background: var(--hw-orange); color: #1a0b2e; }
 .logo-text { color: #fff; }
 .main-nav a { color: var(--hw-text); }
 .main-nav a:hover { background: var(--hw-card2); }
@@ -30,28 +30,15 @@ body { background: var(--hw-bg); color: var(--hw-text); }
 /* Accueil */
 .hero {
   position: relative; overflow: hidden;
-  background:
-    radial-gradient(circle at 82% 22%, rgba(255, 177, 92, 0.95) 0 5%, rgba(255, 122, 26, 0.35) 6%, transparent 24%),
-    radial-gradient(circle at 12% 95%, rgba(107, 47, 179, 0.55), transparent 45%),
-    linear-gradient(160deg, #0d0618, #1d0f35 60%, #2a1250);
+  background: #1d0f35;
 }
-.hero::before { content: "🕸️"; position: absolute; top: 6px; left: 8px; font-size: 3.5rem; opacity: 0.55; pointer-events: none; }
-.hero h1 { font-family: var(--hw-font); font-weight: 400; letter-spacing: 0.04em; color: var(--hw-orange2); text-shadow: 0 0 22px rgba(255, 122, 26, 0.65); }
+.hero h1 { font-family: var(--hw-font); font-weight: 400; letter-spacing: 0.04em; color: var(--hw-orange2); }
 .eyebrow { color: var(--hw-orange2); }
 .eyebrow.dark { color: var(--hw-orange); }
 
-.hw-decor span { position: absolute; pointer-events: none; user-select: none; }
-.hw-decor .bat { font-size: 2rem; animation: hw-fly 14s linear infinite; opacity: 0.85; }
-.hw-decor .bat:nth-child(1) { top: 12%; left: -8%; }
-.hw-decor .bat:nth-child(2) { top: 30%; left: -8%; animation-delay: -5s; font-size: 1.5rem; }
-.hw-decor .bat:nth-child(3) { top: 58%; left: -8%; animation-delay: -9s; font-size: 1.8rem; }
-.hw-decor .pumpkin { right: 6%; bottom: 8%; font-size: clamp(3rem, 8vw, 5.5rem); animation: hw-bob 3.5s ease-in-out infinite; filter: drop-shadow(0 0 18px rgba(255, 122, 26, 0.7)); }
-.hw-decor .ghost { right: 24%; top: 12%; font-size: clamp(2rem, 5vw, 3.2rem); animation: hw-bob 4.5s ease-in-out infinite reverse; opacity: 0.9; }
-@keyframes hw-fly { from { transform: translateX(0) translateY(0); } 50% { transform: translateX(60vw) translateY(-22px); } to { transform: translateX(115vw) translateY(0); } }
-@keyframes hw-bob { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-14px) rotate(4deg); } }
 
 /* Boutons */
-.btn-gold { background: linear-gradient(135deg, var(--hw-orange), var(--hw-orange2)); color: #1a0b2e; }
+.btn-gold { background: var(--hw-orange); color: #1a0b2e; }
 .btn-outline { border-color: var(--hw-orange2); color: #fff; }
 
 /* Sections */
@@ -67,9 +54,9 @@ body { background: var(--hw-bg); color: var(--hw-text); }
 .filter { background: var(--hw-card); border-color: #3b2563; color: var(--hw-text); }
 .filter:hover { border-color: var(--hw-orange); }
 .filter.is-active { background: var(--hw-orange); border-color: var(--hw-orange); color: #1a0b2e; }
-.thumb.t-studio { background: linear-gradient(135deg, #3b1a6b, #7c3aed); }
-.thumb.t-appartement { background: linear-gradient(135deg, #1d0f35, #4c1d95); }
-.thumb.t-villa { background: linear-gradient(135deg, #9a3412, #ff7a1a); }
+.thumb.t-studio { background: #4c1d95; }
+.thumb.t-appartement { background: #312e81; }
+.thumb.t-villa { background: #9a3412; }
 .type-tag { background: #1a0b2e; color: var(--hw-orange2); }
 .price { color: #fff; }
 .price span { color: var(--hw-orange); }
@@ -79,10 +66,10 @@ body { background: var(--hw-bg); color: var(--hw-text); }
 .car-btn:hover { background: var(--hw-orange); color: #1a0b2e; }
 
 /* Étapes */
-.step-num { background: linear-gradient(135deg, var(--hw-orange), var(--hw-orange2)); color: #1a0b2e; font-family: var(--hw-font); font-weight: 400; }
+.step-num { background: var(--hw-orange); color: #1a0b2e; font-family: var(--hw-font); font-weight: 400; }
 
 /* Propriétaires + formulaire */
-.section-blue { background: linear-gradient(135deg, #0d0618, #2a1250); }
+.section-blue { background: #1d0f35; }
 .checklist li::before { color: var(--hw-orange2); }
 .form { background: var(--hw-card); color: var(--hw-text); border: 1px solid rgba(255, 122, 26, 0.25); }
 .form h3 { color: var(--hw-orange2); }
@@ -101,8 +88,4 @@ body { background: var(--hw-bg); color: var(--hw-text); }
 
 @media (max-width: 860px) {
   .main-nav { background: #170d29; box-shadow: 0 14px 24px rgba(0, 0, 0, 0.5); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hw-decor .bat, .hw-decor .pumpkin, .hw-decor .ghost { animation: none; }
-  .hw-decor .bat { display: none; }
 }
