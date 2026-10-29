@@ -9,7 +9,8 @@
 
 var LOGEMENTS = [
   { name: "Appartement 3 pièces", type: "Appartement", area: "Angré Petro Ivoire", price: 60000,
-    amenities: [] },
+    amenities: [],
+    photos: ["petro-1.jpg", "petro-2.jpg", "petro-3.jpg", "petro-4.jpg", "petro-5.jpg"] },
   { name: "Villa sans piscine", type: "Villa", area: "Riviera 3, Cocody", price: 150000,
     amenities: [] },
 
