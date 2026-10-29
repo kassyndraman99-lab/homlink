@@ -8,8 +8,8 @@
    Ne publiez jamais le nom ni le numéro du propriétaire. */
 
 var LOGEMENTS = [
-  { name: "Villa 5 pièces avec piscine", type: "Villa", area: "Riviera 3, Cocody", price: 200000,
-    amenities: ["Piscine", "Wi-Fi", "Sécurité 24h/24", "Garage couvert"] },
+  { name: "Appartement 3 pièces", type: "Appartement", area: "Angré Petro Ivoire", price: 60000,
+    amenities: [] },
   { name: "Villa sans piscine", type: "Villa", area: "Riviera 3, Cocody", price: 150000,
     amenities: [] },
 
