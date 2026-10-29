@@ -95,6 +95,16 @@ function initCarousels() {
   });
 }
 
+/* Si une photo ne charge pas, on essaie l'autre emplacement (avec ou sans dossier Images) */
+catalogue.addEventListener("error", (e) => {
+  const img = e.target;
+  if (!(img instanceof HTMLImageElement) || img.dataset.tried) return;
+  img.dataset.tried = "1";
+  const raw = decodeURI(img.getAttribute("src"));
+  const alt = /^Images\//i.test(raw) ? raw.replace(/^Images\//i, "") : "Images/" + raw;
+  img.src = encodeURI(alt);
+}, true);
+
 document.querySelectorAll(".filter").forEach((btn) => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".filter").forEach((b) => {
