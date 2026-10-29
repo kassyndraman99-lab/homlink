@@ -34,8 +34,9 @@ var LOGEMENTS = [
   { name: "Résidence meublée", type: "Studio", area: "Angré Château", price: 25000,
     amenities: [],
     photos: ["chateau-1.jpg", "chateau-2.jpg", "chateau-3.jpg", "chateau-4.jpg", "chateau-5.jpg", "chateau-6.jpg", "chateau-7.jpg"] },
-  { name: "Studio", type: "Studio", area: "Angré", price: 25000,
-    amenities: [], note: "Promo : 2 jours pour 45 000 FCFA" },
+  { name: "Studio", type: "Studio", area: "Angré", price: 30000,
+    amenities: [], note: "Promo : 2 jours pour 45 000 FCFA",
+    photos: ["studio-angre-1.jpg", "studio-angre-2.jpg", "studio-angre-3.jpg", "studio-angre-4.jpg", "studio-angre-5.jpg", "studio-angre-6.jpg", "studio-angre-7.jpg"] },
   { name: "Résidence meublée 2 pièces", type: "Appartement", area: "Angré 9e tranche", price: 90000,
     amenities: ["Piscine privée", "Wi-Fi", "Climatisation", "Nettoyage", "Sécurité"] },
 
