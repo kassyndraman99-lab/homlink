@@ -41,8 +41,9 @@ var LOGEMENTS = [
   { name: "Studio appartement", type: "Studio", area: "Angré", price: 30000,
     amenities: [],
     photos: ["studio-angre-1.jpg", "studio-angre-2.jpg", "studio-angre-3.jpg", "studio-angre-4.jpg", "studio-angre-5.jpg", "studio-angre-6.jpg", "studio-angre-7.jpg"] },
-  { name: "Résidence meublée 2 pièces", type: "Appartement", area: "Angré 9e tranche", price: 90000,
-    amenities: ["Piscine privée", "Wi-Fi", "Climatisation", "Nettoyage", "Sécurité"] },
+  { name: "Villa 5 pièces + dépendance", type: "Villa", area: "Riviera 3, Cocody", price: 150000,
+    amenities: ["4 chambres climatisées avec salles d'eau privatives", "1 dépendance", "Grand séjour moderne et lumineux", "Salle à manger", "Cuisine moderne équipée", "Cuisine africaine pratique", "Chauffe-eau", "Wi-Fi haut débit", "Garage couvert et parking sécurisé", "Sécurité 24h/24", "Espace extérieur"],
+    photos: ["villa-riviera3-1.jpg", "villa-riviera3-2.jpg", "villa-riviera3-3.jpg", "villa-riviera3-4.jpg", "villa-riviera3-5.jpg", "villa-riviera3-6.jpg", "villa-riviera3-7.jpg", "villa-riviera3-8.jpg", "villa-riviera3-9.jpg", "villa-riviera3-10.jpg", "villa-riviera3-11.jpg"] },
 
   { name: "Logement 2 pièces", type: "Appartement", area: "Yopougon, Anneraie", price: 30000,
     amenities: ["Netflix", "Wi-Fi", "Prime Vidéo", "Climatisation", "Ménage 2 fois par semaine"] },
