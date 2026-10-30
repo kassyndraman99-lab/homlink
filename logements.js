@@ -50,8 +50,9 @@ var LOGEMENTS = [
 
   { name: "Chambre salon", type: "Appartement", area: "Abatta, carrefour Mefco", price: 30000,
     amenities: [], note: "Promo : 25 000 FCFA jusqu'au 10/11" },
-  { name: "Studio", type: "Studio", area: "Faya, pharmacie Ephratta", price: 25000,
-    amenities: [] },
+  { name: "Studio haut standing", type: "Studio", area: "Angré 8e tranche, pharmacie Emanuel", price: 25000,
+    amenities: [],
+    photos: ["studio-hs-1.jpg", "studio-hs-2.jpg", "studio-hs-3.jpg", "studio-hs-4.jpg", "studio-hs-5.jpg", "studio-hs-6.jpg", "studio-hs-7.jpg"] },
   { name: "Logement", type: "Studio", area: "Angré", price: 25000,
     amenities: ["Wi-Fi", "Netflix", "Chauffe-eau"],
     photos: ["angre-logement-1.jpg", "angre-logement-2.jpg", "angre-logement-3.jpg", "angre-logement-4.jpg", "angre-logement-5.jpg"] },
