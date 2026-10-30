@@ -46,11 +46,13 @@ var LOGEMENTS = [
 
   { name: "Logement 2 pièces", type: "Appartement", area: "Yopougon, Anneraie", price: 30000,
     amenities: ["Netflix", "Wi-Fi", "Prime Vidéo", "Climatisation", "Ménage 2 fois par semaine"] },
-  { name: "Résidence", type: "Studio", area: "Yopougon, vers la pharmacie Maty", price: 25000,
-    amenities: [] },
+  { name: "Appartement 2 pièces haut standing", type: "Appartement", area: "Angré, pharmacie Saint Viateur", price: 25000,
+    amenities: [],
+    photos: ["viateur-1.jpg", "viateur-2.jpg", "viateur-3.jpg", "viateur-4.jpg", "viateur-5.jpg", "viateur-6.jpg", "viateur-7.jpg"] },
 
-  { name: "Chambre salon", type: "Appartement", area: "Abatta, carrefour Mefco", price: 30000,
-    amenities: [], note: "Promo : 25 000 FCFA jusqu'au 10/11" },
+  { name: "Résidence meublée 3 pièces", type: "Appartement", area: "Riviera M'Badon, pharmacie Bonne Fortune", price: 55000,
+    amenities: ["Haut standing, spacieux", "Bordure de voie principale", "Sécurisée", "Chambres autonomes", "TV, Canal", "Netflix", "Wi-Fi", "Chauffe-eau", "Cuisine équipée", "Parking interne", "Balcon avec barres de sécurité", "Gardien 24h/24"],
+    photos: ["mbadon-1.jpg", "mbadon-2.jpg", "mbadon-3.jpg", "mbadon-4.jpg", "mbadon-5.jpg", "mbadon-6.jpg"] },
   { name: "Studio haut standing", type: "Studio", area: "Angré 8e tranche, pharmacie Emanuel", price: 30000,
     amenities: [],
     photos: ["studio-hs-1.jpg", "studio-hs-2.jpg", "studio-hs-3.jpg", "studio-hs-4.jpg", "studio-hs-5.jpg", "studio-hs-6.jpg", "studio-hs-7.jpg"] },
