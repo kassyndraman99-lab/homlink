@@ -59,7 +59,8 @@ var LOGEMENTS = [
     photos: ["angre-logement-1.jpg", "angre-logement-2.jpg", "angre-logement-3.jpg", "angre-logement-4.jpg", "angre-logement-5.jpg"] },
 
   { name: "Studio avec jacuzzi", type: "Studio", price: 45000,
-    amenities: ["Jacuzzi"] },
+    amenities: ["Jacuzzi"],
+    photos: ["jacuzzi-1.jpg", "jacuzzi-2.jpg", "jacuzzi-3.jpg", "jacuzzi-4.jpg", "jacuzzi-5.jpg", "jacuzzi-6.jpg", "jacuzzi-7.jpg"] },
   { name: "Appartement 3 pièces", type: "Appartement", price: 60000,
     amenities: [],
     photos: ["appart3-1.jpg", "appart3-2.jpg", "appart3-3.jpg", "appart3-4.jpg", "appart3-5.jpg"] }
