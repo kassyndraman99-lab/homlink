@@ -51,8 +51,9 @@ var LOGEMENTS = [
     amenities: [], note: "Promo : 25 000 FCFA jusqu'au 10/11" },
   { name: "Studio", type: "Studio", area: "Faya, pharmacie Ephratta", price: 25000,
     amenities: [] },
-  { name: "Logement", type: "Studio", area: "Carrefour Arafat", price: 25000,
-    amenities: ["Wi-Fi", "Netflix", "Chauffe-eau"] },
+  { name: "Logement", type: "Studio", area: "Angré", price: 25000,
+    amenities: ["Wi-Fi", "Netflix", "Chauffe-eau"],
+    photos: ["angre-logement-1.jpg", "angre-logement-2.jpg", "angre-logement-3.jpg", "angre-logement-4.jpg", "angre-logement-5.jpg"] },
 
   { name: "Studio avec jacuzzi", type: "Studio", price: 45000,
     amenities: ["Jacuzzi"] },
