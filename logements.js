@@ -45,8 +45,9 @@ var LOGEMENTS = [
     amenities: ["4 chambres climatisées avec salles d'eau privatives", "1 dépendance", "Grand séjour moderne et lumineux", "Salle à manger", "Cuisine moderne équipée", "Cuisine africaine pratique", "Chauffe-eau", "Wi-Fi haut débit", "Garage couvert et parking sécurisé", "Sécurité 24h/24", "Espace extérieur"],
     photos: ["villa-riviera3-1.jpg", "villa-riviera3-2.jpg", "villa-riviera3-3.jpg", "villa-riviera3-4.jpg", "villa-riviera3-5.jpg", "villa-riviera3-6.jpg", "villa-riviera3-7.jpg", "villa-riviera3-8.jpg", "villa-riviera3-9.jpg", "villa-riviera3-10.jpg", "villa-riviera3-11.jpg"] },
 
-  { name: "Logement 2 pièces", type: "Appartement", area: "Yopougon, Anneraie", price: 30000,
-    amenities: ["Netflix", "Wi-Fi", "Prime Vidéo", "Climatisation", "Ménage 2 fois par semaine"] },
+  { name: "Résidence meublée 5 pièces haut standing", type: "Appartement", area: "Riviera Palmeraie, près de l'hôtel Belle Côte", price: 150000,
+    amenities: ["Climatisation", "Frigo et cuisinière", "TV écran plat", "Canal+ Sat, plus de 10 000 chaînes", "Ustensiles de cuisine sur place", "Grand placard", "Salle de bain et toilette très propres", "Wi-Fi illimité"],
+    photos: ["palmeraie-1.jpg", "palmeraie-2.jpg", "palmeraie-3.jpg", "palmeraie-4.jpg", "palmeraie-5.jpg", "palmeraie-6.jpg", "palmeraie-7.jpg", "palmeraie-8.jpg", "palmeraie-9.jpg", "palmeraie-10.jpg"] },
   { name: "Appartement 2 pièces haut standing", type: "Appartement", area: "Angré, pharmacie Saint Viateur", price: 25000,
     amenities: [],
     photos: ["viateur-1.jpg", "viateur-2.jpg", "viateur-3.jpg", "viateur-4.jpg", "viateur-5.jpg", "viateur-6.jpg", "viateur-7.jpg"] },
