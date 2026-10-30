@@ -11,8 +11,9 @@ var LOGEMENTS = [
   { name: "Appartement 3 pièces", type: "Appartement", area: "Angré Petro Ivoire", price: 60000,
     amenities: [],
     photos: ["petro-1.jpg", "petro-2.jpg", "petro-3.jpg", "petro-4.jpg", "petro-5.jpg"] },
-  { name: "Villa sans piscine", type: "Villa", area: "Riviera 3, Cocody", price: 150000,
-    amenities: [] },
+  { name: "Villa 7 pièces avec piscine", type: "Villa", area: "Riviera Palmeraie", price: 250000,
+    amenities: ["Piscine"],
+    photos: ["villa7-1.jpg", "villa7-2.jpg", "villa7-3.jpg", "villa7-4.jpg", "villa7-5.jpg", "villa7-6.jpg", "villa7-7.jpg", "villa7-8.jpg"] },
 
   { name: "Très grand studio haut standing", type: "Studio", area: "Angré 8e tranche", price: 30000,
     amenities: ["Moderne", "Wi-Fi", "Climatisation", "Parking", "Sécurité"],
