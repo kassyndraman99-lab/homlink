@@ -58,6 +58,7 @@ var LOGEMENTS = [
 
   { name: "Studio avec jacuzzi", type: "Studio", price: 45000,
     amenities: ["Jacuzzi"] },
-  { name: "2 chambres salon", type: "Appartement", price: 70000,
-    amenities: [] }
+  { name: "Appartement 3 pièces", type: "Appartement", price: 60000,
+    amenities: [],
+    photos: ["appart3-1.jpg", "appart3-2.jpg", "appart3-3.jpg", "appart3-4.jpg", "appart3-5.jpg"] }
 ];
