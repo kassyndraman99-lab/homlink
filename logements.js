@@ -15,7 +15,7 @@ var LOGEMENTS = [
     amenities: ["Piscine"],
     photos: ["villa7-1.jpg", "villa7-2.jpg", "villa7-3.jpg", "villa7-4.jpg", "villa7-5.jpg", "villa7-6.jpg", "villa7-7.jpg", "villa7-8.jpg"] },
 
-  { name: "Très grand studio haut standing", type: "Studio", area: "Angré 8e tranche", price: 30000,
+  { name: "Très grand studio haut standing", type: "Studio", area: "Angré 8e tranche", price: 35000,
     amenities: ["Moderne", "Wi-Fi", "Climatisation", "Parking", "Sécurité"],
     photos: [
       "Images/WhatsApp Image 2026-10-22 at 02.42.31.jpeg",
@@ -38,7 +38,7 @@ var LOGEMENTS = [
   { name: "Studio", type: "Studio", area: "Angré", price: 25000,
     amenities: [],
     photos: ["studio-promo-1.jpg", "studio-promo-2.jpg", "studio-promo-3.jpg", "studio-promo-4.jpg", "studio-promo-5.jpg", "studio-promo-6.jpg", "studio-promo-7.jpg"] },
-  { name: "Studio appartement", type: "Studio", area: "Angré", price: 30000,
+  { name: "Studio appartement", type: "Studio", area: "Angré", price: 35000,
     amenities: [],
     photos: ["studio-angre-1.jpg", "studio-angre-2.jpg", "studio-angre-3.jpg", "studio-angre-4.jpg", "studio-angre-5.jpg", "studio-angre-6.jpg", "studio-angre-7.jpg"] },
   { name: "Villa 5 pièces + dépendance", type: "Villa", area: "Riviera 3, Cocody", price: 150000,

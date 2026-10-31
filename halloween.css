@@ -89,3 +89,13 @@ body { background: var(--hw-bg); color: var(--hw-text); }
 @media (max-width: 860px) {
   .main-nav { background: #170d29; box-shadow: 0 14px 24px rgba(0, 0, 0, 0.5); }
 }
+
+/* Fenêtre de réservation */
+.modal { background: rgba(8, 4, 16, 0.82); }
+.modal-box { background: var(--hw-card); color: var(--hw-text); border: 1px solid rgba(255, 122, 26, 0.3); }
+.modal-box h3 { color: var(--hw-orange2); }
+.modal-sub { color: var(--hw-muted); }
+.modal-close { background: var(--hw-card2); color: var(--hw-orange2); }
+.modal .field input[type="date"], .modal .field select { background: #140a24; border-color: #3b2563; color: #fff; color-scheme: dark; }
+.modal .field input:focus, .modal .field select:focus { border-color: var(--hw-orange); }
+.resa-summary { background: var(--hw-card2); color: #ffd9b0; }

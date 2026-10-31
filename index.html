@@ -233,6 +233,42 @@
     </div>
   </footer>
 
+  <!-- Fenêtre de réservation (questions avant WhatsApp) -->
+  <div class="modal" id="resaModal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="resaTitle">
+      <button type="button" class="modal-close" id="resaClose" aria-label="Fermer">&times;</button>
+      <h3 id="resaTitle">Votre réservation</h3>
+      <p class="modal-sub" id="resaSub"></p>
+      <form id="resaForm" novalidate>
+        <div class="field">
+          <label for="resaPers">Nombre de personnes *</label>
+          <select id="resaPers" required>
+            <option value="">Choisir…</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+            <option>Plus de 10</option>
+          </select>
+          <p class="error" id="resaPers-error" role="alert"></p>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="resaIn">Date d'entrée *</label>
+            <input type="date" id="resaIn" required>
+            <p class="error" id="resaIn-error" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="resaOut">Date de sortie *</label>
+            <input type="date" id="resaOut" required>
+            <p class="error" id="resaOut-error" role="alert"></p>
+          </div>
+        </div>
+        <p class="resa-summary" id="resaSummary" aria-live="polite">Choisissez vos dates pour voir la durée du séjour.</p>
+        <button type="submit" class="btn btn-gold btn-block">Envoyer ma demande sur WhatsApp</button>
+        <p class="form-note">WhatsApp s'ouvrira avec votre message prêt à envoyer. HOMLINK confirme ensuite la disponibilité et le tarif.</p>
+      </form>
+    </div>
+  </div>
+
   <a href="https://wa.me/2250705352793" class="wa-float" target="_blank" rel="noopener" aria-label="Contacter HOMLINK sur WhatsApp">WhatsApp</a>
 
   <script src="logements.js"></script>
