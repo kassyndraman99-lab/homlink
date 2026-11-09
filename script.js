@@ -8,9 +8,9 @@
 const WHATSAPP_NUMBER = "2250705352793"; // format international, sans + ni espaces
 
 /* ===== Statistiques de visites (Google Analytics 4) =====
-   Collez ici votre identifiant de mesure (il ressemble à G-XXXXXXXXXX).
+   Identifiant de la balise Google (GTM-… ou G-…), copié depuis Google Analytics.
    Tant que cette ligne est vide, aucune statistique n'est collectée. */
-const GA_ID = "";
+const GA_ID = "GTM-5836PFDX";
 (function () {
   if (!GA_ID) return;
   const g = document.createElement("script");
@@ -20,7 +20,7 @@ const GA_ID = "";
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { window.dataLayer.push(arguments); };
   window.gtag("js", new Date());
-  window.gtag("config", GA_ID);
+  if (GA_ID.indexOf("G-") === 0) window.gtag("config", GA_ID); // avec un identifiant GTM-, la balise Google est déjà configurée par Google
 })();
 function track(name, params) {
   try { if (window.gtag) window.gtag("event", name, params || {}); } catch (e) {}
