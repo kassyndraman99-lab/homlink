@@ -7,6 +7,29 @@
 /* Ce fichier est chargé automatiquement par index.html. Ne l'ouvrez pas directement : ouvrez index.html. */
 const WHATSAPP_NUMBER = "2250705352793"; // format international, sans + ni espaces
 
+/* ===== Statistiques de visites (Google Analytics 4) =====
+   Collez ici votre identifiant de mesure (il ressemble à G-XXXXXXXXXX).
+   Tant que cette ligne est vide, aucune statistique n'est collectée. */
+const GA_ID = "";
+(function () {
+  if (!GA_ID) return;
+  const g = document.createElement("script");
+  g.async = true;
+  g.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+  document.head.appendChild(g);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", GA_ID);
+})();
+function track(name, params) {
+  try { if (window.gtag) window.gtag("event", name, params || {}); } catch (e) {}
+}
+document.addEventListener("click", (e) => {
+  const a = e.target.closest && e.target.closest('a[href^="https://wa.me"]');
+  if (a) track("whatsapp_click", { zone: a.classList.contains("wa-float") ? "bouton_flottant" : "lien" });
+});
+
 /* Les logements se modifient dans le fichier logements.js */
 const LISTINGS = (typeof LOGEMENTS !== "undefined" && LOGEMENTS) || [];
 
@@ -231,7 +254,7 @@ catalogue.addEventListener("click", (e) => {
   const btn = e.target.closest(".btn-reserve");
   if (!btn) return;
   const listing = LISTINGS[Number(btn.dataset.idx)];
-  if (listing) openResa(listing, btn);
+  if (listing) { track("reserve_click", { logement: listing.name, prix: listing.price }); openResa(listing, btn); }
 });
 document.getElementById("resaClose").addEventListener("click", closeResa);
 resaModal.addEventListener("click", (e) => { if (e.target === resaModal) closeResa(); });
@@ -263,6 +286,7 @@ resaForm.addEventListener("submit", (e) => {
     `Prix indicatif : ${formatPrice(l.price)} FCFA / nuit (estimation ${formatPrice(n * l.price)} FCFA)`,
     "Pouvez-vous confirmer la disponibilité et le tarif ? Merci."
   ];
+  track("reserve_submit", { logement: l.name, nuits: n });
   window.open(waLink(lines.join("\n")), "_blank", "noopener");
   closeResa();
 });
@@ -318,6 +342,7 @@ form.addEventListener("submit", (e) => {
     form.message.value.trim() ? `Message : ${form.message.value.trim()}` : null
   ].filter(Boolean);
 
+  track("contact_submit");
   window.open(waLink(lines.join("\n")), "_blank", "noopener");
   successMsg.hidden = false;
   form.reset();
